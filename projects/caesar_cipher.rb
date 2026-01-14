@@ -59,7 +59,7 @@ def caesar_cipher(string, arg)
   encoded_string
 end
 
-# obtain and check validity of inputs
+# Obtain and check validity of inputs
 def validate_inputs
 
   puts "Please enter the text you would like to encode:"

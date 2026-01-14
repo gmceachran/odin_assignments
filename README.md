@@ -1,14 +1,6 @@
-# Caesar Cipher
+# Odin Project Assignments
 
-A Ruby implementation of the classic Caesar cipher encryption algorithm.
+This repository contains my solutions and practice assignments from **The Odin Project** ruby curriculum.
 
-## Usage
-
-
-You'll be prompted to enter text and a shift value (0-25).
-
-## Features
-
-- Preserves capitalization
-- Preserves special characters and punctuation
-- Input validation
+Each file is self-contained and designed to be run directly in the terminal.  
+There is no central application or setup—individual scripts correspond to specific exercises or concepts from the course.
