@@ -1,26 +1,27 @@
-def stock_picker(stock_prices)
-  min_price = stock_prices[0]
-  min_day = 0
-  best = { profit: 0, buy: 0, sell: 0 }
+array = [5, 3, 1, 4, 2, 6, 7, 8, 9, 10]
 
-  stock_prices.each_with_index do |price, day|
-    profit = price - min_price
-    
-    if profit > best[:profit]
-      best.merge!(profit: profit, buy: min_day, sell: day)
+
+def bubble_sort(array)
+  for_count = array.length - 1
+  loop do 
+    swapped = false
+  
+    for n in array[0..for_count]
+      index = array.index(n)
+      break if index == array.length - 1
+      next_n = array[index + 1]
+  
+      if n > next_n
+        array[index], array[index + 1] = array[index + 1], array[index]
+        swapped = true
+      end
     end
 
-    if price < min_price
-      min_price = price
-      min_day = day
-    end
-
+    break unless swapped
+    break if for_count <= 0
+    for_count -= 1
   end
-
-  puts "Buy on day #{best[:buy]}, sell on day #{best[:sell]} for a profit of #{best[:profit]}"
-  [best[:buy], best[:sell]]
+  array
 end
 
-stock_prices = [847, 23, 491, 716, 12, 84]
-
-p stock_picker(stock_prices)
+p bubble_sort(array)
